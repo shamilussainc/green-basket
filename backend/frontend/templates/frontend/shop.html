@@ -226,22 +226,24 @@
                     products.forEach(product => {
                         const productCard = `
                             <div class="col-md-6 col-lg-6 col-xl-4">
-                                <div class="rounded position-relative fruite-item">
-                                    <div class="fruite-img">
-                                        <img src="${product.image}" class="img-fluid w-100 rounded-top" alt="${product.name}">
-                                    </div>
-                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">${product.category.label}</div>
-                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                        <h4>${product.label}</h4>
-                                        <p class="text-truncate">${product.description}</p>
-                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">$${product.price} / ${product.weight} kg</p>
-                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
-                                            </a>
+                                <a href="shop/products/${product.id}">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="${product.image}" class="img-fluid w-100 rounded-top" alt="${product.name}">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">${product.category.label}</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>${product.label}</h4>
+                                            <p class="text-truncate">${product.description}</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">$${product.price} / ${product.weight} kg</p>
+                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         `;
                         productListDiv.innerHTML += productCard; // Append the product card to the list

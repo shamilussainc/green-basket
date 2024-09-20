@@ -5,7 +5,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Fruitables - Vegetable Website Template</title>
+        <title>GreenBasket - Vegetable Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -55,16 +55,16 @@
             </div>
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
+                    <a href="{% url 'index-page' %}" class="navbar-brand"><h1 class="text-primary display-6">GreenBasket</h1></a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         {% with request.resolver_match.url_name as url_name %}
                         <div class="navbar-nav mx-auto">
-                            <a href="{% url 'index'%}" class="nav-item nav-link {% if url_name == 'index' %}active{% endif %}">Home</a>
-                            <a href="{% url 'shop'%}" class="nav-item nav-link {% if url_name == 'shop' %}active{% endif %}">Shop</a>
-                            <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <a href="{% url 'index-page'%}" class="nav-item nav-link {% if url_name == 'index-page' %}active{% endif %}">Home</a>
+                            <a href="{% url 'shop-page'%}" class="nav-item nav-link {% if url_name == 'shop-page' %}active{% endif %}">Shop</a>
+                            <a href="shop-detail.html" class="nav-item nav-link  {% if url_name == 'product-page' %}active{% endif %}">Shop Detail</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
@@ -123,7 +123,7 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Fruitables</h1>
+                                <h1 class="text-primary mb-0">GreenBasket</h1>
                                 <p class="text-secondary mb-0">Fresh products</p>
                             </a>
                         </div>

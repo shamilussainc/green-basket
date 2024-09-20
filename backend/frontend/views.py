@@ -9,5 +9,8 @@ def index(request):
 def shop(request):
     return render(request=request, template_name="frontend/shop.html", context=None)
 
-def shop(request):
-    return render(request=render, template_name="frontend/shop-detail.html", context=None)
+def product_details(request, id:int):
+    context = {
+        "product_id": id
+    }
+    return render(request=request, template_name="frontend/shop-detail.html", context=context)
