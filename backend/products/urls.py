@@ -1,8 +1,8 @@
-from rest_framework.routers import SimpleRouter
-from .views import ProductViewSet
+from django.urls import path
+from .views import ProductList, ProductDetail
 
 
-router = SimpleRouter()
-router.register('products', ProductViewSet)
-
-urlpatterns = router.urls
+urlpatterns = [
+    path("products/", ProductList.as_view(), name='product-list'),
+    path("products/<int:pk>/", ProductDetail.as_view(), name='product-detail')
+]

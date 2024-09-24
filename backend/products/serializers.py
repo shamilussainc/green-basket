@@ -14,3 +14,11 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ['id', 'label', 'description', 'price', 'weight', 'image', 'category']
+        read_only_fields = ['id', 'label', 'description', 'price', 'weight', 'image', 'category']
+
+
+class ProductInCartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ['id', 'label', 'price', 'image']
+        read_only_fields = ['id', 'label', 'price', 'image']

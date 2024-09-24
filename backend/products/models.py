@@ -7,7 +7,7 @@ class Product(models.Model):
     price = models.FloatField()
     weight = models.IntegerField(default=1)
     image = models.ImageField(upload_to='products', blank=True, null=True)
-
+    stock = models.IntegerField(default=0)
     category = models.ForeignKey(to='Category', on_delete=models.SET_NULL, null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
